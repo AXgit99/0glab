@@ -31,12 +31,14 @@ echo "export OG_PORT="47"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 rm -rf 0g-chain
 git clone -b v0.2.5 https://github.com/0glabs/0g-chain.git
 cd 0g-chain
 make install
+```
 
 # config and init app
 0gchaind config node tcp://localhost:${OG_PORT}657
