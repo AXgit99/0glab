@@ -40,11 +40,13 @@ cd 0g-chain
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 0gchaind config node tcp://localhost:${OG_PORT}657
 0gchaind config keyring-backend os
 0gchaind config chain-id zgtendermint_16600-2
 0gchaind init "test" --chain-id zgtendermint_16600-2
+```
 
 # download genesis and addrbook
 wget -O $HOME/.0gchain/config/genesis.json https://server-5.itrocket.net/testnet/og/genesis.json
