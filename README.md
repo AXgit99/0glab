@@ -54,11 +54,13 @@ wget -O $HOME/.0gchain/config/genesis.json https://server-5.itrocket.net/testnet
 wget -O $HOME/.0gchain/config/addrbook.json  https://server-5.itrocket.net/testnet/og/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="8f21742ea5487da6e0697ba7d7b36961d3599567@og-testnet-seed.itrocket.net:47656"
 PEERS="80fa309afab4a35323018ac70a40a446d3ae9caf@og-testnet-peer.itrocket.net:11656,103cc8035bb265a1aad865ec81dca69897646a01@38.242.215.44:12656,d8cbe10f1a82952a328e6c5be1251380225810b1@157.173.109.56:26656,0ba76ede1cde81cd242eb7cc7c3630c15265e4e8@217.76.49.214:12656,703bb272138ad988e34c63bc87de5cd36d28aeec@185.185.80.39:12656,e764eb09c843d5ef6fcfce8d5894a93cc55da14e@109.199.101.174:12656,b94cd15ff22b41e8965755bb45b87e64aeb6c7e3@144.91.80.34:12656,0f33e8d20b46e7e3aeb13f514a44aaa9735346d1@161.97.115.147:12656,025cc5990c4e92b172e3f54e74aad2734496490f@109.199.115.26:12656,7536c8a546919fba6743fec8da5e5dd281351ac3@116.203.88.24:26656,f0cab502a3749047738df99cc0b79e8faed604c8@65.108.123.126:12656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.0gchain/config/config.toml
+```
 
 
 # set custom ports in app.toml
