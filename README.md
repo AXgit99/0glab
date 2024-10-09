@@ -63,7 +63,8 @@ sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
 ```
 
 
-# set custom ports in app.toml
+**set custom ports in app.toml**
+```
 sed -i.bak -e "s%:1317%:${OG_PORT}317%g;
 s%:8080%:${OG_PORT}080%g;
 s%:9090%:${OG_PORT}090%g;
@@ -71,6 +72,7 @@ s%:9091%:${OG_PORT}091%g;
 s%:8545%:${OG_PORT}545%g;
 s%:8546%:${OG_PORT}546%g;
 s%:6065%:${OG_PORT}065%g" $HOME/.0gchain/config/app.toml
+```
 
 # set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${OG_PORT}658%g;
