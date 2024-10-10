@@ -74,13 +74,15 @@ s%:8546%:${OG_PORT}546%g;
 s%:6065%:${OG_PORT}065%g" $HOME/.0gchain/config/app.toml
 ```
 
-# set custom ports in config.toml file
+**set custom ports in config.toml file**
+```
 sed -i.bak -e "s%:26658%:${OG_PORT}658%g;
 s%:26657%:${OG_PORT}657%g;
 s%:6060%:${OG_PORT}060%g;
 s%:26656%:${OG_PORT}656%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${OG_PORT}656\"%;
 s%:26660%:${OG_PORT}660%g" $HOME/.0gchain/config/config.toml
+```
 
 # config pruning
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/" $HOME/.0gchain/config/app.toml
