@@ -126,7 +126,8 @@ if curl -s --head curl https://server-5.itrocket.net/testnet/og/og_2024-10-01_12
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable 0gchaind
 sudo systemctl restart 0gchaind && sudo journalctl -u 0gchaind -f
@@ -135,6 +136,8 @@ pruning: custom: 100/0/50 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/og/autoinstall/)
 Create wallet
+```
+
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 0gchaind keys add $WALLET
 
