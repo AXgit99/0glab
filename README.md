@@ -143,8 +143,10 @@ Create wallet
 0gchaind keys add $WALLET
 ```
 
-# to restore exexuting wallet, use the following command
+**to restore exexuting wallet, use the following command**
+```
 0gchaind keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(0gchaind keys show $WALLET -a)
