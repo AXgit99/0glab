@@ -162,10 +162,13 @@ source $HOME/.bash_profile
 0gchaind status 2>&1 | jq 
 ```
 
-# before creating a validator, you need to fund your wallet and check balance
-0gchaind query bank balances $WALLET_ADDRESS 
-Node Sync Status Checker
-#!/bin/bash
+**before creating a validator, you need to fund your wallet and check balance**
+```
+0gchaind query bank balances $WALLET_ADDRESS
+```
+
+**Node Sync Status Checker**
+!/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.0gchain/config/config.toml" | cut -d ':' -f 3)
 while true; do
   local_height=$(curl -s localhost:$rpc_port/status | jq -r '.result.sync_info.latest_block_height')
