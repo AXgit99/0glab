@@ -168,6 +168,7 @@ source $HOME/.bash_profile
 ```
 
 **Node Sync Status Checker**
+```
 !/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.0gchain/config/config.toml" | cut -d ':' -f 3)
 while true; do
@@ -189,20 +190,10 @@ while true; do
 
   sleep 5
 done
+```
+
 Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, ua0gi
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+
 0gchaind tx staking create-validator \
 --amount 1000000ua0gi \
 --from $WALLET \
