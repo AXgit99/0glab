@@ -192,8 +192,8 @@ while true; do
 done
 ```
 
-Create validator
-
+**Create validator**
+```
 0gchaind tx staking create-validator \
 --amount 1000000ua0gi \
 --from $WALLET \
@@ -209,6 +209,8 @@ Create validator
 --chain-id zgtendermint_16600-2 \
 --gas=auto --gas-adjustment=1.6 \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
