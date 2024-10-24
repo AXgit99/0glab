@@ -221,10 +221,12 @@ sudo ufw allow ${OG_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop 0gchaind
 sudo systemctl disable 0gchaind
 sudo rm -rf /etc/systemd/system/0gchaind.service
 sudo rm $(which 0gchaind)
 sudo rm -rf $HOME/.0gchain
 sed -i "/OG_/d" $HOME/.bash_profile
+```
